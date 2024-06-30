@@ -191,9 +191,13 @@
                 }  
                 
                     
-               var music=new Audio("./music/music.mp3");
-               music.play();
-               music.volume=0.5;
+               function startMusic() {
+            var music = new Audio("./music/music.mp3");
+            music.volume = 0.1;
+            music.play().catch(error => console.log(error));
+        }
+
+        document.addEventListener('click', startMusic, { once: true });
                 
             
             
